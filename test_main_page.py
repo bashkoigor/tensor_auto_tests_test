@@ -1,3 +1,5 @@
+import pytest
+
 from .pages.main_page import MainPage
 
 
@@ -25,6 +27,7 @@ class TestCaseSearchInYandex:
         page.put_text_and_press_enter('Тензор')
         page.should_be_search_result()
 
+    @pytest.mark.xfail
     def test_should_be_links(self, browser):
         page = MainPage(browser)
         page.open()
