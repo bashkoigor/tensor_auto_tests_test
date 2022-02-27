@@ -34,6 +34,6 @@ class TestCaseSearchInYandex:
         page.should_be_search_field()
         page.put_text_and_press_enter('Тензор')
         page.should_be_search_result()
-        page.should_be_href('tensor.ru')
+        page.should_be_link('tensor.ru')
 
 
