@@ -11,7 +11,7 @@ class BasePage:
     def open(self):
         self.browser.get(self.url)
 
-    def href(self, link):
+    def should_be_href(self, link):
         pool = []
         for i in range(3, 8):
             element = self.browser.find_element(By.CSS_SELECTOR, f"#search-result > li:nth-child({i}) a")
