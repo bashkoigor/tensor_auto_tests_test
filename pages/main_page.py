@@ -17,6 +17,9 @@ class MainPage(BasePage):
         self.browser.find_element(*MainPageLocators.SEARCH_FIELD).send_keys(Keys.ENTER)
         assert 'search' in self.browser.current_url, "Search result does not exist."
 
+    def should_be_images_link(self):
+        assert self.is_element_present(*MainPageLocators.IMAGES_LINK), "Image link does not exist."
+
 
 
 
