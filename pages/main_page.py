@@ -10,7 +10,7 @@ class MainPage(BasePage):
     def should_be_suggest_block(self):
         assert self.is_element_present(*MainPageLocators.SUGGEST_BLOCK), "Suggest block does not exist."
 
-    def put_text_and_press_enter(self, text):
+    def enter_text(self, text):
         self.browser.find_element(*MainPageLocators.SEARCH_FIELD).send_keys(text)
 
     def should_be_search_result(self):
